@@ -1,11 +1,15 @@
 export const CommentInfo = ({ comment }) => (
   <div className="CommentInfo">
-    <p className="CommentInfo__id">{comment.id}</p>
-    <strong className="CommentInfo__name">{comment.name}</strong>
-    <a className="CommentInfo__email" href={`mailto:${comment.email}`}>
-      {comment.email}
-    </a>
-    <p className="CommentInfo__body">{comment.body}</p>
-    <p className="CommentInfo__postId">{`Post ID: ${comment.postId}`}</p>
+    <div className="CommentInfo__title">
+      <strong className="CommentInfo__name">{comment.name}</strong>
+
+      {' by '}
+
+      <a className="CommentInfo__email" href={`mailto:${comment.email}`}>
+        {comment.email}
+      </a>
+    </div>
+
+    <div className="CommentInfo__body">{comment.body}</div>
   </div>
 );
