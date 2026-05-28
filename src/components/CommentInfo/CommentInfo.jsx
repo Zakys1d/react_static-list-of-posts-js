@@ -1,1 +1,11 @@
-export const CommentInfo = () => <>Put the comment here</>;
+export const CommentInfo = ({ comment }) => (
+  <div className="CommentInfo">
+    <p className="CommentInfo__id">{comment.id}</p>
+    <strong className="CommentInfo__name">{comment.name}</strong>
+    <a className="CommentInfo__email" href={`mailto:${comment.email}`}>
+      {comment.email}
+    </a>
+    <p className="CommentInfo__body">{comment.body}</p>
+    <p className="CommentInfo__postId">{`Post ID: ${comment.postId}`}</p>
+  </div>
+);
